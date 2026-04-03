@@ -1,4 +1,3 @@
-  GNU nano 8.4                                                                                         spoof.py
 import socket
 import time
 from datetime import datetime, timezone, timedelta
@@ -12,7 +11,7 @@ def make_cot(uid, callsign, lat, lon, alt, speed, course):
     now = datetime.now(timezone.utc)
     stale = now + timedelta(seconds=60)
     fmt = "%Y-%m-%dT%H:%M:%S.000Z"
-    return f'<event version="2.0" uid="{uid}" type="a-f-A-M-H-Q" time="{now.strftime(fmt)}" start="{now.strftime(fmt)}" stale="{stale.strftime(fmt)}" how="m-g"><point lat="{lat:.6f}" lon="{lon:.6f}" hae="{alt>
+    return f'<event version="2.0" uid="{uid}" type="a-f-A-M-H-Q" time="{now.strftime(fmt)}" start="{now.strftime(fmt)}" stale="{stale.strftime(fmt)}" how="m-g"><point lat="{lat:.6f}" lon="{lon:.6f}" hae="{alt:.1f}" ce="5.0" le="3.0"/><detail><contact callsign="{callsign}"/><track speed="{speed:.2f}" course="{course:.1f}"/></detail></event>'
 
 drones = [
     {"uid": "px4-sim-001", "callsign": "ALPHA-1", "lat": 34.0522, "lon": -117.2437},
