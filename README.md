@@ -24,15 +24,22 @@ This repo starts with a CoT spoof script for pipeline validation and will grow i
 [ATAK / WinTAK / iTAK]
 ```
 
+For now, the spoof script bypasses the MAVLink layer and injects CoT directly into OpenTAKServer — useful for validating the OTS → ATAK pipeline before real drones are involved.
+
 <p align="center">
   <img src="terminal.png" alt="Command line output for spoofing drones" width="600">
 </p>
+Command line view for executing this script.
 
 <p align="center">
   <img src="atak_screenshot.jpg" alt="ATAK showing 2 spoofed drone tracks" width="600">
 </p>
+ATAK view of spoofed drone tracks.
 
-For now, the spoof script bypasses the MAVLink layer and injects CoT directly into OpenTAKServer — useful for validating the OTS → ATAK pipeline before real drones are involved.
+<p align="center">
+  <img src="EUD_screenshot.png" alt="OpenTAKServer showing the EUD connections. Alpha 1 and 2 are the corresponding spoofed drones." width="600">
+</p>
+Spoofed drone tracks appear in the EUD tab of the OpenTAKServer.
 
 ---
 
